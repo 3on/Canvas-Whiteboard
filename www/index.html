@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+    <style>
+        * {margin: 0px;padding:0px}
+    </style>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="underscore-min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery-1.6.4.min.js"></script>
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		//navigator.notification.alert("PhoneGap is working")
+        var canvas = document.getElementById('canvas')
+        canvas.width = $(document).width()
+        canvas.height = $(document).height()
+        
+        var ctx = canvas.getContext('2d')
+        
+        ctx.fillStyle = "black"
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        
+        var colors = ["#c0ffff", "#e7bcff","#fff0ba", "#adffac"]
+        
+        var touches = []
+        
+        function line(from, to, color) {
+            ctx.strokeStyle = color
+            ctx.lineWidth = 4
+            ctx.lineCap = "round"
+            ctx.beginPath()
+            ctx.moveTo(from.x, from.y)
+            ctx.lineTo(to.x, to.y)
+            ctx.stroke();
+        }
+        
+        function clean() {
+            if (touches.length > 0) return
+            
+            ctx.clearRect(0, 0 , canvas.width, canvas.height)
+            ctx.fillStyle = "black"
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+        }
+        
+        function touchend(event) {
+            touches = []
+        }
+        
+        function touchstart(event) {
+            _.each(event.touches, function(value, key) {
+                   touches[key] = {start: {x: value.pageX, y: value.pageY}, end :{}}
+            })
+        }
+        
+        function touchmove(event) {
+            _.each(event.touches, function(value, key) {
+                   touches[key].end = {x: value.pageX, y: value.pageY}
+                   line(touches[key].start, touches[key].end, colors[key % colors.length])
+                   touches[key].start = touches[key].end 
+            })
+        }
+        
+        window.addEventListener("touchstart", touchstart, false)
+        window.addEventListener("touchmove", touchmove, false)
+        window.addEventListener("touchend", touchend, false)
+        
+        setInterval(clean, 3000)
+	}
+    </script>
+  </head>
+  <body onload="onBodyLoad();onDeviceReady()"> <!-- onDeviceReady is just for chrome needs to be removed -->
+      <canvas id="canvas"></canvas>
+  </body>
+</html>
