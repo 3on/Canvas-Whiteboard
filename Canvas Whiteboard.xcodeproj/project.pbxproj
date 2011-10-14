@@ -404,6 +404,7 @@
 				GCC_PREFIX_HEADER = "Canvas Whiteboard/Canvas Whiteboard-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "Canvas Whiteboard/Canvas Whiteboard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -431,6 +432,7 @@
 				GCC_PREFIX_HEADER = "Canvas Whiteboard/Canvas Whiteboard-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "Canvas Whiteboard/Canvas Whiteboard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -467,6 +469,7 @@
 				2B2A72BF14468C1400B219BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
