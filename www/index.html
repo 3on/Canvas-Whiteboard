@@ -43,6 +43,7 @@
 	function onBodyLoad()
 	{		
 		document.addEventListener("deviceready", onDeviceReady, false);
+        onDeviceReady()
 	}
 	
 	/* When this function is called, PhoneGap has been initialized and is ready to roll */
@@ -56,15 +57,22 @@
         var canvas = document.getElementById('canvas')
         canvas.width = $(document).width()
         canvas.height = $(document).height()
+        var bg = new Image()
+        bg.src = "bg.png"
         
         var ctx = canvas.getContext('2d')
         
         ctx.fillStyle = "black"
         ctx.fillRect(0, 0, canvas.width, canvas.height)
+        background()
         
-        var colors = ["#c0ffff", "#e7bcff","#fff0ba", "#adffac"]
+        var colors = ["#c0ffff", "#e7bcff","#fff0ba", "#adffac", "#ff8a93"]
         
         var touches = []
+        
+        function background() {
+            ctx.drawImage(bg, 0, 0)
+        }
         
         function line(from, to, color) {
             ctx.strokeStyle = color
@@ -82,6 +90,7 @@
             ctx.clearRect(0, 0 , canvas.width, canvas.height)
             ctx.fillStyle = "black"
             ctx.fillRect(0, 0, canvas.width, canvas.height)
+            background()
         }
         
         function touchend(event) {
@@ -106,11 +115,14 @@
         window.addEventListener("touchmove", touchmove, false)
         window.addEventListener("touchend", touchend, false)
         
-        setInterval(clean, 3000)
+        //setInterval(clean, 3000)
+        $("#canvas").click(function(e){
+          clean()
+        })
 	}
     </script>
   </head>
-  <body onload="onBodyLoad();onDeviceReady()"> <!-- onDeviceReady is just for chrome needs to be removed -->
+  <body onload="onBodyLoad()"> <!-- onDeviceReady is just for chrome needs to be removed -->
       <canvas id="canvas"></canvas>
   </body>
 </html>

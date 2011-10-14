@@ -34,6 +34,10 @@
 		2B2A72B414468C1400B219BD /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72B314468C1400B219BD /* PhoneGap.plist */; };
 		2B2A72B814468C1400B219BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A72B714468C1400B219BD /* AppDelegate.m */; };
 		2B2A72C114468C8F00B219BD /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72C014468C8F00B219BD /* www */; };
+		2BCBFF951447E1EE007F4850 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBFF941447E1EE007F4850 /* whiteboard.png */; };
+		2BCBFF981447E1F5007F4850 /* whiteboard-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBFF971447E1F5007F4850 /* whiteboard-small.png */; };
+		2BCBFF9A1447E206007F4850 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBFF991447E206007F4850 /* Default@2x.png */; };
+		2BCBFF9C1447E20C007F4850 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBFF9B1447E20C007F4850 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		2B2A72B714468C1400B219BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		2B2A72BA14468C1400B219BD /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		2B2A72C014468C8F00B219BD /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		2BCBFF941447E1EE007F4850 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteboard.png; sourceTree = "<group>"; };
+		2BCBFF971447E1F5007F4850 /* whiteboard-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteboard-small.png"; sourceTree = "<group>"; };
+		2BCBFF991447E206007F4850 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2BCBFF9B1447E20C007F4850 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		2B2A726514468C1400B219BD = {
 			isa = PBXGroup;
 			children = (
+				2BCBFF9D1447E8F9007F4850 /* Images */,
 				2B2A72C014468C8F00B219BD /* www */,
 				2B2A729114468C1400B219BD /* Canvas Whiteboard */,
 				2B2A727614468C1400B219BD /* Frameworks */,
@@ -229,6 +238,17 @@
 			name = Plugins;
 			sourceTree = "<group>";
 		};
+		2BCBFF9D1447E8F9007F4850 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2BCBFF9B1447E20C007F4850 /* Default.png */,
+				2BCBFF991447E206007F4850 /* Default@2x.png */,
+				2BCBFF971447E1F5007F4850 /* whiteboard-small.png */,
+				2BCBFF941447E1EE007F4850 /* whiteboard.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +314,10 @@
 				2B2A72B214468C1400B219BD /* Capture.bundle in Resources */,
 				2B2A72B414468C1400B219BD /* PhoneGap.plist in Resources */,
 				2B2A72C114468C8F00B219BD /* www in Resources */,
+				2BCBFF951447E1EE007F4850 /* whiteboard.png in Resources */,
+				2BCBFF981447E1F5007F4850 /* whiteboard-small.png in Resources */,
+				2BCBFF9A1447E206007F4850 /* Default@2x.png in Resources */,
+				2BCBFF9C1447E20C007F4850 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
