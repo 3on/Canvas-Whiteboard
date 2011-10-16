@@ -28,8 +28,6 @@
 		2B2A72A714468C1400B219BD /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72A614468C1400B219BD /* icon.png */; };
 		2B2A72A914468C1400B219BD /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72A814468C1400B219BD /* icon@2x.png */; };
 		2B2A72AB14468C1400B219BD /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72AA14468C1400B219BD /* icon-72.png */; };
-		2B2A72AE14468C1400B219BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72AD14468C1400B219BD /* Default.png */; };
-		2B2A72B014468C1400B219BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72AF14468C1400B219BD /* Default@2x.png */; };
 		2B2A72B214468C1400B219BD /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72B114468C1400B219BD /* Capture.bundle */; };
 		2B2A72B414468C1400B219BD /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A72B314468C1400B219BD /* PhoneGap.plist */; };
 		2B2A72B814468C1400B219BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A72B714468C1400B219BD /* AppDelegate.m */; };
@@ -65,8 +63,6 @@
 		2B2A72A614468C1400B219BD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
 		2B2A72A814468C1400B219BD /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/icons/icon@2x.png"; sourceTree = "<group>"; };
 		2B2A72AA14468C1400B219BD /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Resources/icons/icon-72.png"; sourceTree = "<group>"; };
-		2B2A72AD14468C1400B219BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
-		2B2A72AF14468C1400B219BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		2B2A72B114468C1400B219BD /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		2B2A72B314468C1400B219BD /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
 		2B2A72B614468C1400B219BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -215,8 +211,6 @@
 		2B2A72AC14468C1400B219BD /* splash */ = {
 			isa = PBXGroup;
 			children = (
-				2B2A72AD14468C1400B219BD /* Default.png */,
-				2B2A72AF14468C1400B219BD /* Default@2x.png */,
 			);
 			name = splash;
 			sourceTree = "<group>";
@@ -241,8 +235,8 @@
 		2BCBFF9D1447E8F9007F4850 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2BCBFF9B1447E20C007F4850 /* Default.png */,
 				2BCBFF991447E206007F4850 /* Default@2x.png */,
+				2BCBFF9B1447E20C007F4850 /* Default.png */,
 				2BCBFF971447E1F5007F4850 /* whiteboard-small.png */,
 				2BCBFF941447E1EE007F4850 /* whiteboard.png */,
 			);
@@ -309,8 +303,6 @@
 				2B2A72A714468C1400B219BD /* icon.png in Resources */,
 				2B2A72A914468C1400B219BD /* icon@2x.png in Resources */,
 				2B2A72AB14468C1400B219BD /* icon-72.png in Resources */,
-				2B2A72AE14468C1400B219BD /* Default.png in Resources */,
-				2B2A72B014468C1400B219BD /* Default@2x.png in Resources */,
 				2B2A72B214468C1400B219BD /* Capture.bundle in Resources */,
 				2B2A72B414468C1400B219BD /* PhoneGap.plist in Resources */,
 				2B2A72C114468C8F00B219BD /* www in Resources */,

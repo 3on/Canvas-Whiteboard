@@ -43,7 +43,7 @@
 	function onBodyLoad()
 	{		
 		document.addEventListener("deviceready", onDeviceReady, false);
-        onDeviceReady()
+        //onDeviceReady()
 	}
 	
 	/* When this function is called, PhoneGap has been initialized and is ready to roll */
@@ -55,12 +55,33 @@
 		// do your thing!
 		//navigator.notification.alert("PhoneGap is working")
         var canvas = document.getElementById('canvas')
-        canvas.width = $(document).width()
-        canvas.height = $(document).height()
-        var bg = new Image()
-        bg.src = "bg.png"
+        var jCanvas = $(canvas)
+        var width = $(document).width()
+        var height = $(document).height()
+        
+        // put canvas in fullscreen
+        canvas.width = width
+        canvas.height = height
+        
         
         var ctx = canvas.getContext('2d')
+        
+        // higth DPI compatible (retina)
+        if (window.devicePixelRatio) {
+            jCanvas.attr("width", canvas.width * window.devicePixelRatio)
+            jCanvas.attr("height", canvas.height * window.devicePixelRatio)
+            jCanvas.css("width", width)
+            jCanvas.css("height", height)
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            var debug = ""
+            debug += "attr width: " + jCanvas.attr("width") + "\n"
+            debug += "attr height: " + jCanvas.attr("height")
+            alert(canvas.width)
+        }
+        
+        // load background (bad, need to callback this)
+        var bg = new Image()
+        bg.src = "bg.png"
         
         ctx.fillStyle = "black"
         ctx.fillRect(0, 0, canvas.width, canvas.height)
