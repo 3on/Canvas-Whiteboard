@@ -73,10 +73,6 @@
             jCanvas.css("width", width)
             jCanvas.css("height", height)
             ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-            var debug = ""
-            debug += "attr width: " + jCanvas.attr("width") + "\n"
-            debug += "attr height: " + jCanvas.attr("height")
-            alert(canvas.width)
         }
         
         // load background (bad, need to callback this)
@@ -91,8 +87,8 @@
         
         var touches = []
         
-        function background() {
-            ctx.drawImage(bg, 0, 0)
+        function background() {  
+            //ctx.drawImage(bg, 0, 0)
         }
         
         function line(from, to, color) {
